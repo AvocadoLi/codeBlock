@@ -4,3 +4,14 @@
   box-sizing: border-box;
   color: white;
 }
+
+@font-face {
+  font-family: 'DeYiHei';
+  src: url('../font/DeYiHei.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'DeYiHei', sans-serif;
+}

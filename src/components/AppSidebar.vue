@@ -1,7 +1,7 @@
 <template>
   <div class="absolute left-20px top-50% transform-translate-y-[-50%] h-98vh z-100">
-    <div class="flex justify-center mb-20px">
-      <img class="w-150px" :src="logo" />
+    <div class="flex justify-center mb-10px">
+      <img class="w-150px rounded-2xl" :src="logo" />
     </div>
 
     <div
@@ -12,7 +12,7 @@
       ]"
     >
       <div class="flex flex-col h-full text-white py-5">
-        <div class="flex items-center justify-between px-5 mb-7">
+        <!-- <div class="flex items-center justify-between px-5 mb-7">
           <h3 v-if="!isCollapsed" class="text-lg font-semibold m-0 whitespace-nowrap">菜单</h3>
           <button
             class="bg-transparent border-none text-white cursor-pointer w-6 h-6 flex items-center justify-center text-base hover:bg-white/10 rounded"
@@ -21,7 +21,7 @@
             <span v-if="isCollapsed">→</span>
             <span v-else>←</span>
           </button>
-        </div>
+        </div> -->
 
         <div v-if="!isCollapsed" class="flex flex-col gap-2.5 px-5">
           <div
@@ -63,9 +63,9 @@ const menuItems = [
   { icon: '👤', text: '用户中心' },
 ]
 
-const toggleSidebar = () => {
-  isCollapsed.value = !isCollapsed.value
-}
+// const toggleSidebar = () => {
+//   isCollapsed.value = !isCollapsed.value
+// }
 </script>
 
 <style lang="sass" scoped>
