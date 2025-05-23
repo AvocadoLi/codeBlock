@@ -1,18 +1,14 @@
-
 <template>
-  <div class="relative h-screen"> 
-    <AppSidebar />
-    <div class="pl-278px">
-      111
-  
-      222222
+  <div class="relative h-screen">
+    <div class="grid grid-cols-4 gap-4">
+      <BlockCard v-for="n in 8" :key="n" />
     </div>
   </div>
 </template>
-  
-<script setup lang="ts">
-import AppSidebar from '@/components/AppSidebar.vue';
 
+<script setup lang="ts">
+import BlockCard from '@/components/BlockCard/BlockCard.vue'
+// import CodeEditorDemo from './CodeEditorDemo.vue'
 </script>
 
 <style scoped></style>

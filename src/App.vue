@@ -1,13 +1,9 @@
 <template>
-  <ViewBackground>
-    <RouterView />
-  </ViewBackground>
+  <RouterView />
 </template>
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import ViewBackground from '@/components/ViewBackground.vue';
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
