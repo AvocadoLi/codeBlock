@@ -38,7 +38,9 @@ import { searchKeymap, search, highlightSelectionMatches } from '@codemirror/sea
 const editorTheme = {
   // 基础颜色
   colors: {
+    // background: 'rgba(0, 0, 0, 0.5)', // 主背景色
     background: '#21222C', // 主背景色
+    // background: '#212121', // 主背景色
     border: '#333333', // 边框颜色
     text: '#d4d4d4', // 文本颜色
     tooltipBg: '#252525', // 提示框背景色
@@ -56,19 +58,13 @@ const editorTheme = {
   },
 }
 
-// 字体配置
-const fontConfig = {
-  family: '"JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace',
-  size: '16px',
-  lineHeight: '1.6',
-}
-
 const props = withDefaults(
   defineProps<{
     modelValue?: string
     language?: string
     readonly?: boolean
     tabSize?: number
+    fontSize?: number
     enableAutocompletion?: boolean
   }>(),
   {
@@ -77,6 +73,7 @@ const props = withDefaults(
     readonly: false,
     tabSize: 2,
     enableAutocompletion: true,
+    fontSize: 14,
   },
 )
 
@@ -85,6 +82,12 @@ const emit = defineEmits<{
 }>()
 
 const editorRef = ref<HTMLElement>()
+// 字体配置
+const fontConfig = {
+  family: '"JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, "Courier New", monospace',
+  size: `${props.fontSize}px`,
+  lineHeight: '1.6',
+}
 let view: EditorView | undefined
 
 // 获取主题样式配置

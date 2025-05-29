@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: white;
+  // color: white;
 }
 
 @font-face {
@@ -14,4 +14,34 @@
 
 body {
   font-family: 'DeYiHei', sans-serif;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  opacity: 0;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #868686;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #868686;
+  }
+}
+
+.no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
